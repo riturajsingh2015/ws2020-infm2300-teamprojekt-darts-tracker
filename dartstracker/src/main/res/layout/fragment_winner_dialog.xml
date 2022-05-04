@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".dialogs.WinnerDialog"
+    android:paddingBottom="25dp">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fireworks"
+        android:layout_marginBottom="70dp"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="238dp"
+        android:layout_height="311dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/birthday_girl" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom|center">
+
+        <TextView
+            android:id="@+id/winnerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/winnerCongratulation"
+            android:textSize="25dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

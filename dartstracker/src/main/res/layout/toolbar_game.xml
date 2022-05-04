@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/green"
+    android:elevation="8dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <TextView
+        android:id="@+id/legNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Leg 1 "
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/setNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Satz 1 "
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/roundNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Round 1"
+        android:textSize="30dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/quitGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_rowWeight="1"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:background="@color/green"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@color/green"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:src="@drawable/ic_quit" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</android.widget.Toolbar>

@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Darts Tracker</string>
+    <string name="calibration_dont_save_button">Weiter ohne sichere Kalibrierung</string>
+    <string name="calibration_preview">Vorschau Kalibierung</string>
+    <string name="calibration_help">Bitte richte dein Smartphone standsicher vertikal (hochkant) mit Blick zur Dartscheibe aus.
+    Versuche dabei die Vorschau möglichst komplett mit der Dartscheibe auszufüllen. Sobald die 4 Hilfspunkte stabil erkannt wurden, startet das Spiel automatisch.</string>
+    <string name="menu_button_finish">Anwendung beenden</string>
+    <string name="menu_button_startGame">Spiel Starten</string>
+    <string name="menu_button_gameSettingsStart">Spieleinstellungen</string>
+    <string name="menu_headLine">Darts Tracker</string>
+    <string name="menu_version">V0.1.0</string>
+    <string name="settings_headline">Player Settings</string>
+    <string name="settings_pointcaller501">501</string>
+    <string name="settings_pointcaller301">301</string>
+    <string name="settings_playerplus">Player hinzufügen</string>
+    <string name="settings_playerminus">Player löschen</string>
+    <string name="dialog_playerdelete">Löschen</string>
+    <string name="settings_start">Weiter</string>
+    <string name="dialog_title">Spielernamen eintragen</string>
+    <string name="dialog_cancelbutton">Abbrechen</string>
+    <string name="dialog_confirmbutton">Spielernamen bestätigen</string>
+    <string name="field_gameSettingsNeeded">Bitte mind. einen Spieler anlegen!</string>
+    <string name="emptyPlayerName">Bitte einen vollständigen Namen für den Spieler angeben!</string>
+    <string name="emptyPlayerList">Bitte legen Sie mindestens einen Spieler an!</string>
+    <string name="winnerCongratulation">Herzlichen Glückwunsch!</string>
+
+    <string name="arrow_1">Pfeil 1</string>
+    <string name="arrow_2">Pfeil 2</string>
+    <string name="arrow_3">Pfeil 3</string>
+    <string name="number1">1</string>
+    <string name="number2">2</string>
+    <string name="number3">3</string>
+    <string name="number4">4</string>
+    <string name="number5">5</string>
+    <string name="number6">6</string>
+    <string name="number7">7</string>
+    <string name="number8">8</string>
+    <string name="number9">9</string>
+    <string name="number10">10</string>
+    <string name="number11">11</string>
+    <string name="number12">12</string>
+    <string name="number13">13</string>
+    <string name="number14">14</string>
+    <string name="number15">15</string>
+    <string name="number16">16</string>
+    <string name="number17">17</string>
+    <string name="number18">18</string>
+    <string name="number19">19</string>
+    <string name="number20">20</string>
+    <string name="numberBackString">Back</string>
+    <string name="numberNull">0</string>
+    <string name="number25">25</string>
+    <string name="number50">50</string>
+    <string name="numberDouble">Double</string>
+    <string name="numberTriple">Triple</string>
+
+</resources>

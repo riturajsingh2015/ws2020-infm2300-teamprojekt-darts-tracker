@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/startDartGame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- CardViews in Abhängigkeit der Spieleranzahl einfügen-->
+    <include
+        android:id="@+id/toolbarGame"
+        layout="@layout/toolbar_game" />
+
+    <LinearLayout
+        android:id="@+id/gameDartPlayerStats"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbarGame"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/arrowNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_below="@id/gameDartPlayerStats"
+        android:columnCount="3"
+        android:rowCount="1">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/arrowOneCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/arrowTwoCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/arrowOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/arrow_1"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/arrowTwoCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/arrowThreeCard"
+            app:layout_constraintStart_toEndOf="@+id/arrowOneCard"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/arrowTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/arrow_2"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/arrowThreeCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/arrowTwoCard"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/arrowThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/arrow_3"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--  Nummernfeld Start  -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/numbers"
+        android:layout_width="289dp"
+        android:layout_height="304dp"
+        android:layout_below="@id/arrowNumbers"
+        android:columnCount="4"
+        android:rowCount="5">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberOneField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberFiveField"
+            app:layout_constraintEnd_toStartOf="@id/numberTwoField"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/numberOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number1"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberTwoField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberSixField"
+            app:layout_constraintEnd_toStartOf="@id/numberThreeField"
+            app:layout_constraintStart_toEndOf="@id/numberOneField"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/numberTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number2"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberThreeField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberSevenField"
+            app:layout_constraintEnd_toStartOf="@id/numberFourField"
+            app:layout_constraintStart_toEndOf="@id/numberTwoField"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/numberThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number3"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberFourField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberEightField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/numberThreeField"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/numberFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number4"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberFiveField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@+id/numberNineField"
+            app:layout_constraintEnd_toStartOf="@+id/numberSixField"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberOneField">
+
+
+            <TextView
+                android:id="@+id/numberFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number5"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberSixField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberTenField"
+            app:layout_constraintEnd_toStartOf="@id/numberSevenField"
+            app:layout_constraintStart_toEndOf="@id/numberFiveField"
+            app:layout_constraintTop_toBottomOf="@id/numberTwoField">
+
+            <TextView
+                android:id="@+id/numberSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number6"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberSevenField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberElevenField"
+            app:layout_constraintEnd_toStartOf="@id/numberEightField"
+            app:layout_constraintStart_toEndOf="@id/numberSixField"
+            app:layout_constraintTop_toBottomOf="@id/numberThreeField">
+
+            <TextView
+                android:id="@+id/numberSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number7"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberEightField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberTwelveField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/numberSevenField"
+            app:layout_constraintTop_toBottomOf="@id/numberFourField">
+
+            <TextView
+                android:id="@+id/numberEight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number8"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberNineField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberThirtheenField"
+            app:layout_constraintEnd_toStartOf="@+id/numberTenField"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberFiveField">
+
+            <TextView
+                android:id="@+id/numberNine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number9"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberTenField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberFourtheenField"
+            app:layout_constraintEnd_toStartOf="@id/numberElevenField"
+            app:layout_constraintStart_toEndOf="@id/numberNineField"
+            app:layout_constraintTop_toBottomOf="@id/numberSixField">
+
+            <TextView
+                android:id="@+id/numberTen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number10"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberElevenField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberFiftheenField"
+            app:layout_constraintEnd_toStartOf="@id/numberTwelveField"
+            app:layout_constraintStart_toEndOf="@id/numberTenField"
+            app:layout_constraintTop_toBottomOf="@id/numberSevenField">
+
+            <TextView
+                android:id="@+id/numberEleven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number11"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberTwelveField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberSixteenField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/numberElevenField"
+            app:layout_constraintTop_toBottomOf="@id/numberEightField">
+
+            <TextView
+                android:id="@+id/numberTwelve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number12"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberThirtheenField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberSeventheenField"
+            app:layout_constraintEnd_toStartOf="@id/numberFourtheenField"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/numberNineField">
+
+            <TextView
+                android:id="@+id/numberThirtheen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number13"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberFourtheenField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberEighteenField"
+            app:layout_constraintEnd_toStartOf="@id/numberFiftheenField"
+            app:layout_constraintStart_toEndOf="@id/numberThirtheenField"
+            app:layout_constraintTop_toBottomOf="@id/numberTenField">
+
+            <TextView
+                android:id="@+id/numberFortheen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number14"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberFiftheenField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberNinetheenField"
+            app:layout_constraintEnd_toStartOf="@id/numberSixteenField"
+            app:layout_constraintStart_toEndOf="@id/numberFourtheenField"
+            app:layout_constraintTop_toBottomOf="@id/numberElevenField">
+
+            <TextView
+                android:id="@+id/numberFiftheen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number15"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberSixteenField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberTwentyField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/numberFiftheenField"
+            app:layout_constraintTop_toBottomOf="@id/numberTwelveField">
+
+            <TextView
+                android:id="@+id/numberSixteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number16"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberSeventheenField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/numberEighteenField"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/numberThirtheenField">
+
+            <TextView
+                android:id="@+id/numberSeventheen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number17"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberEighteenField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/numberNinetheenField"
+            app:layout_constraintStart_toEndOf="@id/numberSeventheenField"
+            app:layout_constraintTop_toBottomOf="@id/numberFourtheenField">
+
+            <TextView
+                android:id="@+id/numberEighteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number18"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberNinetheenField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/numberTwentyField"
+            app:layout_constraintStart_toEndOf="@id/numberEighteenField"
+            app:layout_constraintTop_toBottomOf="@id/numberFiftheenField">
+
+            <TextView
+                android:id="@+id/numberNinetheen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number19"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberTwentyField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/numberNinetheenField"
+            app:layout_constraintTop_toBottomOf="@id/numberSixteenField">
+
+            <TextView
+                android:id="@+id/numberTwenty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number20"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/otherNumberCards"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/changeNumbers"
+        android:layout_below="@id/arrowNumbers"
+        android:layout_toEndOf="@id/numbers"
+        android:columnCount="1"
+        android:rowCount="4">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberBackCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberNullCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/numberBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/numberBackString"
+                android:textSize="25sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberNullCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberTwentyFiveCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/numberBackCard">
+
+            <TextView
+                android:id="@+id/numberNull"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/numberNull"
+                android:textSize="25sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberTwentyFiveCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/numberFiftyCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/numberNullCard">
+
+            <TextView
+                android:id="@+id/numberTwentyFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number25"
+                android:textSize="25sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/numberFiftyCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/numberTwentyFiveCard">
+
+            <TextView
+                android:id="@+id/numberFifty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/number50"
+                android:textSize="25sp" />
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/changeNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@id/numbers"
+        android:columnCount="2"
+        android:rowCount="1">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/changeToDoubleCardView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/changeToTripleCardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/changeToDouble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/numberDouble"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/changeToTripleCardView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/changeToDoubleCardView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/changeToTriple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/numberTriple"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/previewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/changeNumbers">
+
+        <ImageView
+            android:id="@+id/previewImage"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/calcDartValueBox"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/previewImage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
